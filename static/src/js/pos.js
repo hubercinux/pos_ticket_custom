@@ -26,8 +26,10 @@ function pos_ticket_custom(instance, module){
             n = n + '';
             return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
         }
-        var num = seq.number_next_actual;
+        var num = seq.number_next_actual - seq.number_increment;
+
         seq.number_next_actual += seq.number_increment;
+        //seq.number_next_actual = seq.number_next_actual;
 
         return format(seq.prefix, idict) + pad(num, seq.padding) + format(seq.suffix, idict)
     }

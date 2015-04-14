@@ -25,7 +25,7 @@ class pos_config(osv.Model):
                 'padding':8,
                 'code':'pos.order.custom',
                 'prefix': seq_prefix,
-                'auto_reset': True,
+                'auto_reset': False,
                 'reset_period': 'month',
                 })
             values.update({'pos_order_sequence_id':seq_id})
@@ -47,8 +47,6 @@ class pos_config(osv.Model):
             super(pos_config, self).write(cr, uid, [conf.id], values, context=context)
         return True
         
-
-
 class pos_order(osv.Model):
     _inherit = 'pos.order'
 
@@ -58,6 +56,6 @@ class pos_order(osv.Model):
         seq = order.session_id.config_id.pos_order_sequence_id
         if seq:
             name = self.pool.get('ir.sequence').next_by_id(cr, uid, seq.id, context=context)
-        self.write(cr, uid, [res_id], {'name':name}, context)
+        self.write(cr, uid, [res_id], {'pos_reference':name}, context)
         return res_id
 
