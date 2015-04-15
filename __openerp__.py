@@ -7,7 +7,7 @@
     'description': """
     module *ir_sequence_autoreset* is available here: https://github.com/yelizariev/addons-yelizariev
     """,
-    'depends' : ['point_of_sale', 'ir_sequence_autoreset'],
+    'depends' : ['point_of_sale'],
     'data':[
         'data.xml',
         'views.xml',

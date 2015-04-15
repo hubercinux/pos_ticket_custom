@@ -25,8 +25,6 @@ class pos_config(osv.Model):
                 'padding':8,
                 'code':'pos.order.custom',
                 'prefix': seq_prefix,
-                'auto_reset': False,
-                'reset_period': 'month',
                 })
             values.update({'pos_order_sequence_id':seq_id})
         else:
