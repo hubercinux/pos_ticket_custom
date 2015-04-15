@@ -3,9 +3,9 @@
     'version' : '1.0.0',
     'author' : 'Ivan Yelizariev',
     'category' : 'Point Of Sale',
-    'website' : 'https://yelizariev.github.io',
+    'website' : 'https://sysneoconsulting.com',
     'description': """
-    module *ir_sequence_autoreset* is available here: https://github.com/yelizariev/addons-yelizariev
+    Module modify by Jhonny Martínez Espinoza. https://sysneoconsulting.com. Allow Add custom sequence to ticket.
     """,
     'depends' : ['point_of_sale'],
     'data':[
